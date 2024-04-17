@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Home from './components/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
+import FormComponent from './components/FormComponent'
 
 function App() {
   return (
@@ -11,7 +11,8 @@ function App() {
     <Router>
     <Header />
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home/>} />
+      <Route path="/form" element={<FormComponent/>} />
     </Routes>
   </Router>
   

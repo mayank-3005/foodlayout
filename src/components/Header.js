@@ -1,45 +1,34 @@
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-const Header = () => {
-    return (
-        <div className="flex justify-between">
-            <div>
-                <img className="w-[100px] h-[70px]" src="https://lh3.googleusercontent.com/Em7AHf7XBH_RtGfCBVXz9RH8SM_pHkj3xPP-yd3cRguY1_Jc8fmqgx6WxnvGVyPV5xs5gL3HCD0FCuv6Xo4CwoY6ak4" alt="logo" />
-            </div>
-            <ul className="flex px-[70px]">
-                <li className="p-3">
-                    <Link to="/">Lodaing</Link>
-                </li>
-                <li className="p-3">
-                    <Link to="/">Home</Link>
-                </li>
-                <li className="p-3">
-                    <Link to="/">Gailery</Link>
-                </li>
-                <li className="p-3">
-                    <Link to="/">Shop</Link>
-                </li>
-                <li className="p-3">
-                    <Link to="/">Blog</Link>
-                </li>
-                <li className="p-3">
-                    <Link to="/">About</Link>
-                </li>
-                <li className="p-3">
-                    <Link to="/">Team</Link>
-                </li>
-                <li className="p-3">
-                    <Link to="/">Contact</Link>
-                </li>
-                <li className="p-3">
-                <Link to="/"><i className="fa-solid fa-cart-shopping"></i></Link>
-
-                </li>
-            </ul>
-        </div>
-    );
+function Header() {
+  return (
+    <Navbar expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="home">Logo</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="link">About</Nav.Link>
+            <NavDropdown title="Other" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 }
 
 export default Header;

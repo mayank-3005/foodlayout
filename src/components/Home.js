@@ -6,6 +6,7 @@ import Imagegrid from './imagegird';
 import Testimonials from './Testimonials';
 import OurNews from './OurNews';
 import FormComponent from './FormComponent';
+import FooterComponent from './FooterComponet';
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
         <Testimonials/>
         <OurNews/>
         <FormComponent/>
+        <FooterComponent/>
         </div>
        
     )
