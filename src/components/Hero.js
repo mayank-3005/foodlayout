@@ -1,26 +1,31 @@
 
+
+import ContactForm from "./ContactUsForm";
+
+
 const Hero = () =>{
     return(
-        <div style={{ 
-            backgroundImage: `url(https://t4.ftcdn.net/jpg/02/92/20/37/360_F_292203735_CSsyqyS6A4Z9Czd4Msf7qZEhoxjpzZl1.jpg)`, 
-            backgroundSize: 'cover', 
-            backgroundPosition: 'center', 
-            height: '420px', 
-            position: 'relative', 
-            textAlign: 'center', 
-            paddingTop: '100px',
-            paddingBottom :'100px'
-            
-        }}>
-            <h1 className="heading">Only Quality Food</h1>
-            <p className="paragraph">This is the text overlaid on the background image.</p>
-            <p className="paragraph">Text ever since the 1500s, when an unknown printer took a galley.</p>
-            <p className="paragraph">Text ever since the 1500s, when an unknown printer took a galley.</p>
-            <div style={{ marginTop: '20px' }}> 
-                <button className="button" style={{ marginRight: '10px' }}>VIEW MENU</button>
-                <button className="button">RESERVATION</button>
+        <section>
+        <div className="">
+            <div className="container col-xxl-11">
+                <div className="row flex-lg align-items-center pt-5">
+                    <div className="col-lg-6">
+                        <h1 className="display-4 fw-bold text-success lh-1 mb-3">Bharat Ecofuels</h1>
+                        <p className="text-success-emphasis mb-2">At Bharat Ecofuels, we are renovating the nation’s scene for
+                            millions of farmers and People in india.</p>
+                        <p className="text-success-emphasis">In The Industry Of Biofuel We Are Generating Opportunity &amp;
+                            Employment For The People Who Live In Even The Most Rustic Areas.
+                            Hold The Vision And Trust Of The Process. A City Is Not Gauged By Its Length And Width.
+                            We Thank! Our Distributers, Clients, Customers, Associates, Employee And our Well-Wishers.
+                        </p>
+                    </div>
+                    <div className="col-lg-6 ">
+                     <ContactForm/>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
     );
     
 }
